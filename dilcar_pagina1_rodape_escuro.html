@@ -1,4 +1,11 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dilcar Corretora — Processo Seletivo</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -32,23 +39,27 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 520px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
-/* Header */
+@media (min-width: 400px) {
+  .container { padding: 0 20px; }
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0 16px;
+  padding: 18px 0 14px;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .header-logo {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--primary);
   letter-spacing: 0.1em;
@@ -58,47 +69,47 @@ body {
 .header-logo span { color: var(--accent); }
 
 .header-badge {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-tertiary);
   background: var(--surface-alt);
-  padding: 4px 12px;
+  padding: 4px 10px;
   border-radius: 100px;
   letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
-/* Hero */
 .hero {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .hero-icon {
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   background: var(--accent-light);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
-  font-size: 28px;
+  margin: 0 auto 14px;
+  font-size: 26px;
 }
 
 .badge-success {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   background: var(--accent-light);
   color: var(--accent-dark);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 100px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .hero h1 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
   color: var(--primary);
   line-height: 1.2;
@@ -108,18 +119,17 @@ body {
 .hero h1 span { color: var(--accent); }
 
 .hero p {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.6;
 }
 
-/* Cards */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: 16px;
+  padding: 18px;
+  margin-bottom: 14px;
   box-shadow: var(--shadow);
 }
 
@@ -129,32 +139,31 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
-/* Stats */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-bottom: 14px;
+  gap: 6px;
+  margin-bottom: 12px;
 }
 
 .stat-item {
   background: var(--surface-alt);
   border-radius: var(--radius-sm);
-  padding: 12px 8px;
+  padding: 10px 6px;
   text-align: center;
 }
 
 .stat-num {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--accent);
 }
 
 .stat-label {
-  font-size: 9px;
+  font-size: 8px;
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -162,7 +171,7 @@ body {
 }
 
 .card-text {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
   line-height: 1.7;
 }
@@ -175,55 +184,53 @@ body {
   color: var(--accent-dark);
   border-radius: 100px;
   padding: 4px 10px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
-/* Dates */
 .dates-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .date-card {
   background: var(--surface-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 12px 14px;
+  padding: 11px 12px;
 }
 
 .date-label {
-  font-size: 10px;
+  font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--text-tertiary);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .date-value {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--primary);
 }
 
-/* Salary */
 .salary-card {
   background: var(--accent-light);
   border: 1px solid rgba(42,127,98,0.2);
   border-radius: var(--radius);
-  padding: 16px 18px;
+  padding: 14px 16px;
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .salary-icon {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   background: var(--accent);
   border-radius: var(--radius-sm);
   display: flex;
@@ -231,168 +238,151 @@ body {
   justify-content: center;
   flex-shrink: 0;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .salary-label {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--accent-dark);
   margin-bottom: 2px;
 }
 
 .salary-value {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--primary);
 }
 
-/* Section label */
 .section-label {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-tertiary);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-/* Benefits */
 .benefits-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 28px;
+  gap: 6px;
+  margin-bottom: 24px;
 }
 
 .benefit {
   background: var(--surface-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 12px;
+  padding: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  transition: border-color 0.15s;
-}
-
-.benefit:hover {
-  border-color: var(--accent);
+  gap: 8px;
 }
 
 .benefit i {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--accent);
   flex-shrink: 0;
 }
 
 .benefit span {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text);
 }
 
-/* CTA */
 .cta-wrap {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .cta-btn {
   width: 100%;
-  padding: 16px;
+  padding: 15px;
   background: var(--accent);
   color: #fff;
   border: none;
   border-radius: var(--radius);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  transition: background 0.15s, transform 0.1s;
+  gap: 8px;
+  -webkit-tap-highlight-color: transparent;
   box-shadow: 0 4px 20px rgba(42,127,98,0.3);
 }
 
-.cta-btn:hover {
-  background: var(--accent-dark);
-  transform: translateY(-1px);
-}
-
 .cta-btn:active {
-  transform: translateY(0);
+  opacity: 0.9;
+  transform: scale(0.98);
 }
 
 .cta-sub {
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-tertiary);
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
-/* Footer */
 .footer {
   text-align: center;
-  padding: 24px 0 32px;
+  padding: 20px 0 28px;
   border-top: 1px solid var(--border);
 }
 
 .footer-name {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .footer-info {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-tertiary);
 }
 
-/* WhatsApp FAB */
 .wa-btn {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 20px;
+  right: 16px;
   z-index: 30;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   background: #25D366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
   cursor: pointer;
   border: none;
-  transition: transform 0.15s;
-}
-
-.wa-btn:hover {
-  transform: scale(1.08);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .wa-btn svg {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   fill: #fff;
 }
 
-/* Animations */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: none; }
 }
 
-.anim-1 { animation: fadeUp 0.4s ease both; }
-.anim-2 { animation: fadeUp 0.4s ease 0.1s both; }
-.anim-3 { animation: fadeUp 0.4s ease 0.2s both; }
-.anim-4 { animation: fadeUp 0.4s ease 0.3s both; }
-.anim-5 { animation: fadeUp 0.4s ease 0.4s both; }
-.anim-6 { animation: fadeUp 0.4s ease 0.5s both; }
-.anim-7 { animation: fadeUp 0.4s ease 0.6s both; }
-.anim-8 { animation: fadeUp 0.4s ease 0.7s both; }
+.anim-1 { animation: fadeUp 0.35s ease both; }
+.anim-2 { animation: fadeUp 0.35s ease 0.08s both; }
+.anim-3 { animation: fadeUp 0.35s ease 0.16s both; }
+.anim-4 { animation: fadeUp 0.35s ease 0.24s both; }
+.anim-5 { animation: fadeUp 0.35s ease 0.32s both; }
+.anim-6 { animation: fadeUp 0.35s ease 0.40s both; }
+.anim-7 { animation: fadeUp 0.35s ease 0.48s both; }
+.anim-8 { animation: fadeUp 0.35s ease 0.56s both; }
 </style>
+</head>
+<body>
 
 <div class="container">
   <div class="header">
@@ -402,7 +392,7 @@ body {
 
   <div class="hero anim-1">
     <div class="hero-icon">🎉</div>
-    <div class="badge-success">✓ Você foi aprovado</div>
+    <div class="badge-success"><i class="ti ti-circle-check" style="font-size:12px"></i> Você foi aprovado</div>
     <h1>Parabéns,<br>você foi <span>selecionado!</span></h1>
     <p>Você passou pelo nosso processo seletivo.<br>Confira abaixo tudo que preparamos para você.</p>
   </div>
@@ -415,23 +405,23 @@ body {
       <div class="stat-item"><div class="stat-num">BA</div><div class="stat-label">Lauro de Freitas</div></div>
     </div>
     <div class="card-text">Somos uma corretora de seguros com mais de duas décadas de experiência, comprometida em oferecer as melhores soluções em seguros, previdência e saúde. Nossa missão é proteger o que mais importa para as pessoas com transparência e confiança.</div>
-    <div class="card-tag">🏢 Corretores e agentes de seguros</div>
+    <div class="card-tag"><i class="ti ti-building" style="font-size:11px"></i> Corretores e agentes de seguros</div>
   </div>
 
   <div class="dates-grid anim-3">
     <div class="date-card">
-      <div class="date-label">📅 Exame admissional</div>
+      <div class="date-label"><i class="ti ti-calendar" style="font-size:9px;margin-right:2px"></i> Exame admissional</div>
       <div class="date-value">18/06/2026</div>
     </div>
     <div class="date-card">
-      <div class="date-label">🚩 Início</div>
+      <div class="date-label"><i class="ti ti-flag" style="font-size:9px;margin-right:2px"></i> Início</div>
       <div class="date-value">23/06/2026</div>
     </div>
   </div>
 
   <div class="section-label anim-4">Remuneração</div>
   <div class="salary-card anim-4">
-    <div class="salary-icon">$</div>
+    <div class="salary-icon"><i class="ti ti-currency-dollar"></i></div>
     <div>
       <div class="salary-label">Faixa salarial + comissões</div>
       <div class="salary-value">R$ 2.500 — R$ 6.300</div>
@@ -440,20 +430,20 @@ body {
 
   <div class="section-label anim-5">Benefícios</div>
   <div class="benefits-grid anim-5">
-    <div class="benefit"><span>🏋️</span><span>Gympass</span></div>
-    <div class="benefit"><span>🛍️</span><span>Vale Alimentação</span></div>
-    <div class="benefit"><span>🍳</span><span>Vale Refeição</span></div>
-    <div class="benefit"><span>🌐</span><span>Curso de Inglês</span></div>
-    <div class="benefit"><span>❤️</span><span>Plano de Saúde</span></div>
-    <div class="benefit"><span>🦷</span><span>Plano Odontológico</span></div>
-    <div class="benefit"><span>🛡️</span><span>Seguro de Vida</span></div>
-    <div class="benefit"><span>🏠</span><span>Home office / Híbrido</span></div>
-    <div class="benefit"><span>🏆</span><span>Comissões e Bonificações</span></div>
+    <div class="benefit"><i class="ti ti-barbell"></i><span>Gympass</span></div>
+    <div class="benefit"><i class="ti ti-shopping-bag"></i><span>Vale Alimentação</span></div>
+    <div class="benefit"><i class="ti ti-tools-kitchen-2"></i><span>Vale Refeição</span></div>
+    <div class="benefit"><i class="ti ti-language"></i><span>Curso de Inglês</span></div>
+    <div class="benefit"><i class="ti ti-heart-plus"></i><span>Plano de Saúde</span></div>
+    <div class="benefit"><i class="ti ti-tooth"></i><span>Plano Odontológico</span></div>
+    <div class="benefit"><i class="ti ti-shield-check"></i><span>Seguro de Vida</span></div>
+    <div class="benefit"><i class="ti ti-home"></i><span>Home office / Híbrido</span></div>
+    <div class="benefit"><i class="ti ti-trophy"></i><span>Comissões e Bonificações</span></div>
   </div>
 
   <div class="cta-wrap anim-6">
     <button class="cta-btn" onclick="proximo()">
-      Próximo passo →
+      Próximo passo <i class="ti ti-arrow-right"></i>
     </button>
     <div class="cta-sub">Preencha seus dados para garantir sua vaga</div>
   </div>
@@ -474,8 +464,9 @@ body {
 function proximo() {
   window.location.href = 'dilcar_pagina2_v2.html';
 }
-
 function openLink(url) {
   window.open(url, '_blank');
 }
 </script>
+</body>
+</html>

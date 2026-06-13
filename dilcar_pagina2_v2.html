@@ -1,4 +1,11 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dilcar Corretora — Processo Seletivo</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -31,23 +38,27 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 560px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
-/* Header */
+@media (min-width: 400px) {
+  .container { padding: 0 20px; }
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0 16px;
+  padding: 18px 0 14px;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .header-logo {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--primary);
   letter-spacing: 0.1em;
@@ -57,7 +68,7 @@ body {
 .header-logo span { color: var(--accent); }
 
 .back-link {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-tertiary);
   text-decoration: none;
   display: flex;
@@ -65,13 +76,8 @@ body {
   gap: 4px;
 }
 
-.back-link:hover {
-  color: var(--accent);
-}
-
-/* Step indicator */
 .step {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -82,7 +88,7 @@ body {
 .step-bar {
   display: flex;
   gap: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .step-dot {
@@ -92,37 +98,29 @@ body {
   background: var(--border);
 }
 
-.step-dot.active {
-  background: var(--accent);
-}
+.step-dot.active { background: var(--accent); }
+.step-dot.done { background: var(--accent); opacity: 0.4; }
 
-.step-dot.done {
-  background: var(--accent);
-  opacity: 0.4;
-}
-
-/* Titles */
 .page-title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--primary);
   margin-bottom: 6px;
 }
 
 .page-desc {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-secondary);
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   line-height: 1.6;
 }
 
-/* Card */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: 16px;
+  padding: 18px;
+  margin-bottom: 14px;
   box-shadow: var(--shadow);
 }
 
@@ -130,35 +128,29 @@ body {
   font-size: 13px;
   font-weight: 600;
   color: var(--primary);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
 }
 
-.card-title i {
-  font-size: 16px;
-  color: var(--accent);
-}
+.card-title i { font-size: 15px; color: var(--accent); }
 
 .card-hint {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-tertiary);
-  margin-bottom: 16px;
-  line-height: 1.5;
-}
-
-/* Form */
-.field {
   margin-bottom: 14px;
+  line-height: 1.5;
+  padding-left: 22px;
 }
 
-.field:last-child {
-  margin-bottom: 0;
+.field {
+  margin-bottom: 12px;
 }
+.field:last-child { margin-bottom: 0; }
 
 .label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   color: var(--text-secondary);
   display: block;
@@ -167,7 +159,7 @@ body {
 
 .input {
   width: 100%;
-  padding: 10px 12px;
+  padding: 9px 11px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   font-size: 14px;
@@ -175,7 +167,6 @@ body {
   background: var(--surface);
   color: var(--text);
   outline: none;
-  transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .input:focus {
@@ -183,151 +174,125 @@ body {
   box-shadow: 0 0 0 3px rgba(42,127,98,0.1);
 }
 
-.input::placeholder {
-  color: var(--text-tertiary);
-}
+.input::placeholder { color: var(--text-tertiary); }
 
 select.input {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238e96a4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
-  padding-right: 36px;
+  padding-right: 34px;
 }
 
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 8px;
 }
 
-/* Shirt selector */
 .shirt-grid {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
-  margin-top: 4px;
 }
 
 .shirt-btn {
-  padding: 8px 20px;
+  padding: 7px 16px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--surface);
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 13px;
   font-family: inherit;
   cursor: pointer;
-  transition: all 0.12s;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.shirt-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent-dark);
-}
+.shirt-btn:hover { border-color: var(--accent); color: var(--accent-dark); }
+.shirt-btn.active { background: var(--accent-light); border-color: var(--accent); color: var(--accent-dark); font-weight: 600; }
 
-.shirt-btn.active {
-  background: var(--accent-light);
-  border-color: var(--accent);
-  color: var(--accent-dark);
-  font-weight: 600;
-}
-
-/* Highlight card */
 .highlight-card {
   border-radius: var(--radius);
   border: 1px solid rgba(42,127,98,0.25);
   background: var(--accent-light);
-  padding: 20px;
-  margin-top: 8px;
-  margin-bottom: 24px;
+  padding: 18px;
+  margin: 6px 0 22px;
 }
 
 .highlight-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--accent-dark);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
 }
 
-.highlight-title i {
-  font-size: 18px;
-  color: var(--accent);
-}
+.highlight-title i { font-size: 16px; color: var(--accent); }
 
 .highlight-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   background: var(--surface);
   border: 1px solid rgba(42,127,98,0.2);
   border-radius: 100px;
-  padding: 5px 12px;
-  font-size: 12px;
+  padding: 4px 10px;
+  font-size: 11px;
   color: var(--accent-dark);
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .highlight-desc {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
-/* Button */
 .btn {
   width: 100%;
-  padding: 14px;
+  padding: 13px;
   background: var(--accent);
   color: #fff;
   border: none;
   border-radius: var(--radius-sm);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  transition: background 0.15s, transform 0.1s;
+  gap: 7px;
+  -webkit-tap-highlight-color: transparent;
   box-shadow: 0 4px 16px rgba(42,127,98,0.25);
 }
 
-.btn:hover {
-  background: var(--accent-dark);
-  transform: translateY(-1px);
-}
+.btn:active { opacity: 0.9; transform: scale(0.98); }
 
-.btn:active {
-  transform: translateY(0);
-}
-
-/* Footer */
 .page-footer {
   font-size: 11px;
   color: var(--text-tertiary);
   text-align: center;
-  margin-top: 24px;
-  padding-bottom: 40px;
+  margin-top: 22px;
+  padding-bottom: 36px;
 }
 
-/* Animations */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: none; }
 }
 
-.anim-1 { animation: fadeUp 0.4s ease both; }
-.anim-2 { animation: fadeUp 0.4s ease 0.1s both; }
-.anim-3 { animation: fadeUp 0.4s ease 0.2s both; }
-.anim-4 { animation: fadeUp 0.4s ease 0.3s both; }
+.anim-1 { animation: fadeUp 0.35s ease both; }
+.anim-2 { animation: fadeUp 0.35s ease 0.1s both; }
+.anim-3 { animation: fadeUp 0.35s ease 0.2s both; }
+.anim-4 { animation: fadeUp 0.35s ease 0.3s both; }
 </style>
+</head>
+<body>
 
 <div class="container">
   <div class="header">
@@ -352,12 +317,10 @@ select.input {
       <label class="label">CEP</label>
       <input class="input" type="text" placeholder="00000-000" maxlength="9">
     </div>
-
     <div class="field">
       <label class="label">Rua / Avenida</label>
       <input class="input" type="text" placeholder="Nome da rua">
     </div>
-
     <div class="row">
       <div class="field">
         <label class="label">Número</label>
@@ -368,7 +331,6 @@ select.input {
         <input class="input" type="text" placeholder="Apto, bloco...">
       </div>
     </div>
-
     <div class="row">
       <div class="field">
         <label class="label">Bairro</label>
@@ -379,7 +341,6 @@ select.input {
         <input class="input" type="text" placeholder="Sua cidade">
       </div>
     </div>
-
     <div class="field" style="margin-bottom:0">
       <label class="label">Estado</label>
       <select class="input">
@@ -407,11 +368,11 @@ select.input {
   </div>
 
   <div class="highlight-card anim-4">
-    <p class="highlight-title"><i class="ti ti-mail"></i> Etapa final</p>
-    <div class="highlight-badge"><i class="ti ti-file-text"></i> Exame Toxicológico</div>
-    <p class="highlight-desc">O valor será ressarcido no primeiro salário.</p>
+    <p class="highlight-title"><i class="ti ti-mail"></i> Envio de currículo</p>
+    <div class="highlight-badge"><i class="ti ti-file-text"></i> Documentos obrigatórios</div>
+    <p class="highlight-desc">Envie seu currículo e documentos atualizados para darmos continuidade ao seu processo seletivo.</p>
     <button class="btn" onclick="openLink('https://mail.google.com/mail/?view=cm&fs=1&to=SEU_EMAIL_AQUI&su=Candidatura%20-%20Dilcar%20Corretora')">
-      <i class="ti ti-mail"></i> Pagamento do exame toxicológico
+      <i class="ti ti-mail"></i> Enviar e-mail agora
     </button>
   </div>
 
@@ -423,8 +384,9 @@ function selectShirt(btn) {
   document.querySelectorAll('.shirt-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 }
-
 function openLink(url) {
   window.open(url, '_blank');
 }
 </script>
+</body>
+</html>
